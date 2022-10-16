@@ -1,5 +1,5 @@
 class Carro {
-    private modelo: string
+    private modelo: string // No S6 não é necessário inferir o tipo da variável
     private numeroDePortas: number
     private velocidade: number = 0
 
