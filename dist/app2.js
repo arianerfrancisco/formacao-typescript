@@ -54,3 +54,4 @@ let listaDeCarros = [carroA, carroB, carroC];
 let concessionaria = new Concessionaria('Av Paulista', listaDeCarros);
 /* --- exibir a lista de carros --- */
 console.log(concessionaria.mostrarListaDeCarros());
+console.log(concessionaria.mostrarListaDeCarros());
