@@ -16,8 +16,9 @@ class Carro {
     }
 }
 class Concessionaria {
-    constructor(endereco) {
+    constructor(endereco, listaDeCarros) {
         this.endereco = endereco;
+        this.listaDeCarros = listaDeCarros;
     }
     fornecerEndereco() {
         return this.endereco;
@@ -26,3 +27,30 @@ class Concessionaria {
         return this.listaDeCarros;
     }
 }
+class Pessoa {
+    constructor(nome, carroPreferido) {
+        this.nome = nome;
+        this.carroPreferido = carroPreferido;
+    }
+    dizerNome() {
+        return this.nome;
+    }
+    dizerCarroPreferido() {
+        return this.carroPreferido;
+    }
+    comprarCarro(carro) {
+        this.carro = carro;
+    }
+    dizerCarroQueTem() {
+        return this.carro;
+    }
+}
+/* --- cirar carros --- */
+let carroA = new Carro('dodge journey', 4);
+let carroB = new Carro('veloster', 3);
+let carroC = new Carro('cerato', 4);
+/* --- montar a lista de carros da concessionaria ---*/
+let listaDeCarros = [carroA, carroB, carroC];
+let concessionaria = new Concessionaria('Av Paulista', listaDeCarros);
+/* --- exibir a lista de carros --- */
+console.log(concessionaria.mostrarListaDeCarros());
