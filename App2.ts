@@ -1,6 +1,6 @@
-import Carro  from './Carro'
-import Pessoa  from './Pessoa'
-import Concessionaria  from './Concessionaria'
+import Carro  from './model/Carro'
+import Pessoa  from './model/Pessoa'
+import Concessionaria  from './model/Concessionaria'
 /* --- criar carros --- */
 let carroA = new Carro('dodge journey', 4)
 let carroB = new Carro('veloster', 3)

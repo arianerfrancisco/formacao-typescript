@@ -1,7 +1,7 @@
-import {ConcessionariaDao} from './ConcessionariaDao'
-import Concessionaria from './Concessionaria'
-import { PessoaDao } from './PessoaDao'
-import Pessoa from './Pessoa'
+import {ConcessionariaDao} from './dao/ConcessionariaDao'
+import Concessionaria from './model/Concessionaria'
+import { PessoaDao } from './dao/PessoaDao'
+import Pessoa from './model/Pessoa'
 
 let dao: ConcessionariaDao = new ConcessionariaDao()
 let concessionaria = new Concessionaria('', [])
