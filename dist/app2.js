@@ -45,7 +45,7 @@ class Pessoa {
         return this.carro;
     }
 }
-/* --- cirar carros --- */
+/* --- criar carros --- */
 let carroA = new Carro('dodge journey', 4);
 let carroB = new Carro('veloster', 3);
 let carroC = new Carro('cerato', 4);
@@ -53,5 +53,4 @@ let carroC = new Carro('cerato', 4);
 let listaDeCarros = [carroA, carroB, carroC];
 let concessionaria = new Concessionaria('Av Paulista', listaDeCarros);
 /* --- exibir a lista de carros --- */
-console.log(concessionaria.mostrarListaDeCarros());
 console.log(concessionaria.mostrarListaDeCarros());
