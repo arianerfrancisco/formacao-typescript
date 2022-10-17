@@ -5,6 +5,9 @@ class Concessionaria {
         this.endereco = endereco;
         this.listaDeCarros = listaDeCarros;
     }
+    fornecerHorariosDeFuncionamento() {
+        return 'De segunda a Sexta: 08 às 18';
+    }
     fornecerEndereco() {
         return this.endereco;
     }
