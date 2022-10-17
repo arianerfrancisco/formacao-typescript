@@ -1,36 +1,26 @@
-class Carro {
-    private modelo: string // No S6 não é necessário inferir o tipo da variável
-    private numeroDePortas: number
-    private velocidade: number = 0
+import Carro  from './Carro'
+import Pessoa  from './Pessoa'
+import Concessionaria  from './Concessionaria'
+/* --- criar carros --- */
+let carroA = new Carro('dodge journey', 4)
+let carroB = new Carro('veloster', 3)
+let carroC = new Carro('cerato', 4)
 
-    constructor(modelo: string, numeroDePortas: number) {
-        this.modelo = modelo
-        this.numeroDePortas = numeroDePortas
-    }
-    public acelerar(): void {
-        this.velocidade = this.velocidade + 10
-    }
-    public parar(): void {
-        this.velocidade = 0
-    }
-    public velocidadeAtual(): number {
-        return this.velocidade
-    }
-}
+/* --- montar a lista de carros da concessionaria ---*/
+let listaDeCarros: Array<Carro> = [carroA, carroB, carroC]
 
-class Concessionaria {
-    private endereco: string
-    private listaDeCarros: any //poderá receber qualquer dado
+let concessionaria = new Concessionaria('Av Paulista', listaDeCarros)
 
-    constructor(endereco: string) {
-        this.endereco = endereco
-    }
+/* --- exibir a lista de carros --- */
+// console.log(concessionaria.mostrarListaDeCarros())
 
-    public fornecerEndereco(): string {
-        return this.endereco
+/* --- comprar o carro --- */
+let cliente = new Pessoa('João', 'veloster')
+concessionaria.mostrarListaDeCarros().map((carro:Carro) => {
+    if(cliente.dizerCarroPreferido() === carro['modelo']) {
+        console.log(`Cliente comprou o carro ${carro.['modelo']}`)
+        cliente.comprarCarro(carro)
     }
+})
 
-    public mostrarListaDeCarros(): any {
-        return this.listaDeCarros
-    }
-}
+console.log(cliente.dizerCarroQueTem())
